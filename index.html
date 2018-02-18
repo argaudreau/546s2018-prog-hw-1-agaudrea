@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Homework 1</title>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div id="buttons" class="card">
+      <h2>Draw</h2>
+      <button id="btn-draw-line">Line</button>
+      <button id="btn-draw-circle">Circle</button>
+      <button id="btn-draw-ellipse">Ellipse</button>
+      <button id="btn-draw-rectangle">Rectangle</button>
+      <button id="btn-draw-polygon">Polygon</button>
+      <button id="btn-draw-polyline">Polyline</button>
+    </div>
+    <p id="hint-double-click" hidden><em>Hint: Double click to close polygons and polylines.</em></p>
+    <hr>
+    <div id="body">
+      <div id="canvas-container" class="card">
+        <canvas id="canvas" class="main-canvas" height="600px" width="800px">
+          Your broswer doesn't support <pre>canvas</pre>!
+        </canvas>
+      </div>
+      <div id="settings-container" class="card">
+        <h2>Options</h2>
+        <hr>
+        <h4>Stroke</h4>
+        <p>R: <input id="strokeR" class="rgb" maxlength="3" value="255" max="255" type="number"> 
+           G: <input id="strokeG" class="rgb" maxlength="3" value="0" max="255" type="number"> 
+           B: <input id="strokeB" class="rgb" maxlength="3" value="0" max="255" type="number"> 
+           A: <input id="strokeA" class="rgb" maxlength="3" value="255" max="255" type="number"></p>
+        <p>Size: <input id="size" class="rgb" value="1" max="20" type="number"></p>
+        <p><input id="chk-dashed" type="checkbox"> Dashed</p>
+        <h4>Canvas</h4>
+        <p>R: <input id="canvasR" class="rgb" maxlength="3" value="184" max="255" type="number"> 
+          G: <input id="canvasG" class="rgb" maxlength="3" value="184" max="255" type="number"> 
+          B: <input id="canvasB" class="rgb" maxlength="3" value="184" max="255" type="number"> 
+          A: <input id="canvasA" class="rgb" maxlength="3" value="255" max="255" type="number"></p>
+        <button id="btn-apply-settings">Apply</button>
+        <button id="btn-clear">Clear</button>
+      </div>
+    </div>
+    <script src="js/draw.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
