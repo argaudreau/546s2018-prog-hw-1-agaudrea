@@ -10,6 +10,8 @@ var btnDrawPolyline = document.getElementById('btn-draw-polyline');
 var btnClear = document.getElementById('btn-clear');
 var btnApplySettings = document.getElementById('btn-apply-settings');
 var chkDashed = document.getElementById('chk-dashed');
+var colorStroke = document.getElementById('color-stroke');
+var colorCanvas = document.getElementById('color-canvas');
 // Booleans
 var boolAddingLine = false;
 var boolAddingCircle = false;
@@ -184,6 +186,30 @@ function rubberband(event) {
   }
 }
 canvas.addEventListener('mousemove', rubberband);
+
+function changeStrokeColor() {
+  r = document.getElementById('strokeR').value;
+  g = document.getElementById('strokeG').value;
+  b = document.getElementById('strokeB').value;
+  a = document.getElementById('strokeA').value;
+  colorStroke.style.backgroundColor = "rgba("+r+","+g+","+b+","+(a/255)+")";
+}
+document.getElementById('strokeR').addEventListener('change', changeStrokeColor);
+document.getElementById('strokeG').addEventListener('change', changeStrokeColor);
+document.getElementById('strokeB').addEventListener('change', changeStrokeColor);
+document.getElementById('strokeA').addEventListener('change', changeStrokeColor);
+
+function changeCanvasColor() {
+  r = document.getElementById('canvasR').value;
+  g = document.getElementById('canvasG').value;
+  b = document.getElementById('canvasB').value;
+  a = document.getElementById('canvasA').value;
+  colorCanvas.style.backgroundColor = "rgba("+r+","+g+","+b+","+(a/255)+")";
+}
+document.getElementById('canvasR').addEventListener('change', changeCanvasColor);
+document.getElementById('canvasG').addEventListener('change', changeCanvasColor);
+document.getElementById('canvasB').addEventListener('change', changeCanvasColor);
+document.getElementById('canvasA').addEventListener('change', changeCanvasColor);
 
 function getMouseCoordinates(event) {
   return {x: event.offsetX, y: event.offsetY};
